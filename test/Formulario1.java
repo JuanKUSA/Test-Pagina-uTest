@@ -48,15 +48,15 @@ public class Formulario1 {
         //Encontramos un el elemento Projects
         WebElement Projects2 = chromeDriver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[2]/div[2]/ul/li[1]/a"));
         Projects2.click();
-        WebElement Suggested = chromeDriver.findElement(By.linkText("SUGGESTED"));
+        WebElement Suggested = chromeDriver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[2]/div[2]/ul/li[1]/a"));
         System.out.println(Suggested);
-        Assert.assertTrue(Suggested.isSelected());
+        Assert.assertTrue(Suggested.getText().contains("suggested"));
     }
 
     @Test
     public void ValidarExistenciaPestañaAll(){
         //Encontramos un el elemento Projects
-        WebElement Projects2 = chromeDriver.findElement(By.xpath("/html/body/ui-view/unauthenticated-container/div/div/unauthenticated-header/div/div[3]/ul[1]/li[3]/unauthenticated-header-nav-item/a/span"));
+        WebElement Projects2 = chromeDriver.findElement(By.xpath(""));
         Projects2.click();
         WebElement All = chromeDriver.findElement(By.xpath(""));
     }

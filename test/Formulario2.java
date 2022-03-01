@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.concurrent.TimeUnit;
+
 public class Formulario2 {
     private WebDriver chromeDriver;
 
@@ -17,5 +19,10 @@ public class Formulario2 {
 
         //Nueva instancia de ChromeDriver
         chromeDriver = new ChromeDriver(options);
+
+        //Abrimos una URL
+        chromeDriver.get("https://www.utest.com/");
+        chromeDriver.manage().window().maximize();
+        chromeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 }
